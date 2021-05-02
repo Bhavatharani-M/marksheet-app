@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/log.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main login-box ">
+        <div class="container1">
+            <h2>Admin login</h2>
+            <form name="myform" onsubmit="return(check());" action="/admin_validate" method='POST'>
+                <div class="user-box">
+                    <input type="email" id="email" name="email" required autocomplete="off">
+                    <label>E-mail</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" id="password" name="password" required autocomplete="off">
+                    <label>Password</label>
+                </div>
+                <div>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <div class="button">
+                <a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <button>Submit</button>
+                </a> 
+                </div>
+            </form>
+        </div>
+        <div class="container2">
+            <h1>New to website!!</h1>
+            <a href="/admin_register">Regiter</a>
+        </div>
+    </div>
+    <!-- <script src="../public/js/log.js"></script> -->
+</body>
+</html>

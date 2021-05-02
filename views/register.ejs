@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/reg.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <form name="myform" id="form" onsubmit="return(check());" action="/signupValidate" method='POST'>
+            <p>Register</p>
+            <div class="input">
+                <div class="control ">
+                    <input type="text" id="username" class="success" name="username" placeholder="Name" autocomplete="off">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="control ">
+                    <input type="text" id="rno" name="rno" placeholder="RollNo" autocomplete="off">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>  
+                <div class="control">
+                    <input type="text" id="email" name="email" placeholder="Email" autocomplete="off">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="control">
+                    <input type="password" id="pwd" name="pwd" placeholder="Password" autocomplete="off">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="control">
+                    <input type="password" id="cpwd" name="cpwd" placeholder="Confirm Password" autocomplete="off">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            </div>
+            <div class="control">
+                <span>Gender:<input type="radio" name="gen">Male<input type="radio" name="gen">Female<input type="radio" name="gen">Others<br></span>
+                <small>Error message</small>
+            </div>
+            <button>Register</button>
+        </form>
+        <div class="container1">
+            <i class="fa fa-user-circle-o fa-5x"></i><br>
+            <h1>Already have an account</h1>
+            <a href="/login">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </a>
+        </div>
+    </div>
+    <script src="/static/js/reg.js"></script>
+</body> 
+</html>

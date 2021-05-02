@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkSheet Display</title>
+    <style>
+        table,td,tr,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        tr{
+            background: #f9f9f9;
+        }
+        tr:nth-child(odd){
+            background: #888;
+        }
+        tr:first-child{
+            background: rgb(142, 195, 226);
+            color: rgb(170, 7, 143);
+        }
+        th{
+            padding:6px;
+        }
+        td{
+            text-align: center;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('/static/Images/bg1.jpg') ;
+            background-color: #2e332daf;
+            background-blend-mode:overlay;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: 100% 100%;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+        .center{
+            margin-top: 5%;
+            margin-left: 23%;
+        }
+        .cen{
+            margin-top:5%;
+            margin-left:20%;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            background: -webkit-linear-gradient(rgb(248, 153, 153), rgb(65, 7, 7));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p{
+            font-size:2em;
+        }
+        .align{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>MarkSheet Details</h1>
+<div class=center>
+    <!-- <%userData.forEach(function(data){%>
+    <p><strong>Name:</strong><%=data.name %></p>
+    <% }) %> -->
+    <p><strong>Name:</strong><%=userName %></p>
+    
+    </div>
+    <div class="cen">
+    <table style="width:60%">
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>RollNo</th>
+            <th>Email</th>
+            <th>ExamDate</th>
+            <th>Engineering-1</th>
+            <th>Engineering-2</th>
+            <th>Engineering-3</th>
+            <th>AverageMark</th>
+        </tr>
+        <% if(userData.length!=0){%>
+            <%var i=1;%>
+            <%userData.forEach(function(data){%>
+            <tr>
+                <td><%=i;%></td>
+                <td><%=data.name %></td>
+                <td><%=data.rollno %></td>
+                <td><%=data.email %></td>
+                <% var datemonth=data.date.getMonth()+1 %>
+                <td><%=data.date.getDate()+"/"+datemonth +"/"+ data.date.getFullYear()%></td>
+                <td><%=data.sub1 %></td>
+                <td><%=data.sub2 %></td>
+                <td><%=data.sub3 %></td>
+                <td><%=Math.round((data.sub1+data.sub2+data.sub3)/3)%></td>
+            </tr>
+            <% i++ })%>
+            <% } else { %>
+            <tr>
+                <td colspan="9" class="align">No Data Found</td>
+            </tr>
+            <%}%>
+    </table>
+</div>
+</body>
+</html>

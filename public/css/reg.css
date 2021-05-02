@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('/static/Images/bg1.jpg') ;
+    background-color: #020c46af;
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: 100% 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+    border: none;
+}
+.container{
+    position: absolute;
+    width: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    height: 450px; 
+    background: rgba(165, 156, 156, 0.644);
+    box-shadow: 0 10px 34px 0 rgba(104, 104, 105, 0.374);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+.container1{
+    float: left;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+}
+.container1 h1{
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+} 
+form p{
+    font-weight: 700;
+    color: black;
+    opacity: .7;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 2.4em;
+    text-shadow: 3px 3px 5px rgba(0,0,0,.1);
+}
+form a{
+    text-decoration: none;
+    color: #111;
+    font-size: 13px;
+    font-family: cursive;
+}
+form .input input{
+    background: transparent;
+    overflow: hidden;
+    margin: 0;
+    width: 220px;
+    padding: 1em;
+    margin-bottom: .5em;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: #111;
+    box-shadow: 4px 4px 60px rgba(0,0,0,.2);
+    transition: all 0.2s ease-in-out;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+    
+}
+form span{
+    font-size: smaller;
+}
+form .input input:hover{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,.2);
+    overflow: hidden;
+    border: none;
+}
+form input[type="email"]:focus,
+form input[type="password"]:focus{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 0px rgba(0,0,0,.2);
+}
+button:hover{
+    cursor: pointer;
+    background: #03e9f4;
+    color: white;
+    width: 180px;
+    border-radius: 500px;
+}
+
+::placeholder{
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 1em;
+    color: #111;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
+button{
+    width: 160px;
+    margin-top: 15px;
+    font-size: 25px;
+    padding: 5px; 
+    color:#03e9f4;;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: transparent;
+    outline: none;
+    border-radius: 100px;
+}
+.control.success input{
+    border-color: #2ecc71;
+}
+.control.success i.fa-check-circle{
+    visibility: visible;
+    position: absolute;
+    color: #2ecc71;
+}
+.control.error input{
+    border-color:#e74c3c;
+}
+.control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+.control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+.control small{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    visibility: hidden;
+}
+.control i{
+    position: relative;
+    visibility: hidden;
+}
+.container1 a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+    transition: .5s;
+    overflow: hidden;
+    font-size: 25px;
+    margin-top: 25px;
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    background: #03e9f4;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate 1s linear infinite;
+}
+@keyframes animate{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+ a span:nth-child(3){
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+ a span:nth-child(4){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes animate4{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}

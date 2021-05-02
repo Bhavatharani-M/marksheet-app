@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/marksheet_style1.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main login-box ">
+        <div class="container1">
+            <h2>Marksheet Entry</h2>
+            <h3>Mark-List</h3>
+            <form name="myform" method='POST' action="/mark_details">
+                <div class="user-box">
+                    <input type="text" id="edate" name="edate" required autocomplete="off">
+                    <label>Exam-Date</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="e1" name="e1" required autocomplete="off">
+                    <label>Engineering1</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="e2" name="e2" required autocomplete="off">
+                    <label>Engineering2</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" id="e3" name="e3" required autocomplete="off">
+                    <label>Engineering3</label>
+                </div>
+                <div class="button">
+                    <a href="marksheet_entry.ejs">Back</a>
+                    <button id="b1">AddMarks</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
